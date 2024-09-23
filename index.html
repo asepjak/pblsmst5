@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DCareer</title>
+  <link rel="icon" type="image/png" href="img/wgo.png">
+  <link rel="stylesheet" href="css/css_navbar.css" />
+  <link rel="stylesheet" href="css/css_banner.css" />
+  <link rel="stylesheet" href="css/css_login.css" />
+  <link rel="stylesheet" href="css/css_contact.css" />
+  <link rel="stylesheet" href="css/css_footer.css" />
+  <link rel="stylesheet" href="css/css_about.css" />
+  <link rel="stylesheet" href="cari_lowongan.css" />
+  <!-- <link rel="stylesheet" href="infoloker.css" /> -->
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- INI BAGIAN NAVBAR ATAS -->
+  <div class="navbar">
+    <div class="left-nav">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo Website" />
+      </div>
+      <div class="nav-links-left">
+        <a href="index.html">Home</a>
+        <a href="job.html">Job</a>
+        <a href="#bagian-about">About</a>
+        <a href="pages/alumni.html">Alumni</a>
+     </div>
+    </div>
+
+    <div class="right-nav">
+      <a href="loginawal.html">Login</a>
+      <a href="#bagian-contact">Contact</a>
+    </div>
+  </div>
+
+  <!-- INI BAGIAN BANNER BIRU -->
+  <div id="bagian-banner" class="banner">
+    <div class="banner-content">
+      <h1 id="text-banner">Welcome to Our Website DCareer</h1>
+      <p id="sub-title">Online Job Vacancy Information</p>
+      <a href="job.html" class="btn">Find Job</a>
+    </div>
+  </div>
+
+  <!-- INI BAGIAN JOB -->
+  <!--<section id="bagian-job" style="
+      justify-content: center;
+      align-items: center;
+    display: flex; margin-bottom: 200px;
+      background-color: ;">
+
+    <!-- Main Content -->
+  <!-- <div class="container-job" style="margin-top: 100px">
+      <h2>Cari Lowongan Kerja</h2>
+      <div class="search-section">
+        <input type="text" id="search-input" placeholder="Cari jabatan atau perusahaan">
+        <button onclick="searchJobs()">Cari</button>
+      </div>
+
+      <ul id="job-list" class="job-list">
+        <!-- Hasil pencarian akan ditambahkan di sini -->
+  <!-- </ul>
+    </div>
+
+  </section>
+  <script>
+      // Load applications from localStorage
+      function loadApplications() {
+          const applications = JSON.parse(localStorage.getItem('applications')) || [];
+          const applicationsList = document.getElementById('applicationsList');
+          applicationsList.innerHTML = '';
+
+          if (applications.length === 0) {
+              applicationsList.innerHTML = '<p>Tidak ada lamaran yang masuk.</p>';
+              return;
+          }
+
+          applications.forEach(application => {
+              const jobItem = document.createElement('div');
+              jobItem.classList.add('job-item');
+              jobItem.innerHTML = `
+                  <h3>${application.jobTitle}</h3>
+                  <p><strong>Posisi:</strong> ${application.jobPosition}</p>
+                  <p><strong>Tipe Pekerjaan:</strong> ${application.jobType}</p>
+                  <p><strong>Lokasi:</strong> ${application.jobLocation}</p>
+                  <p><strong>Rentang Gaji:</strong> ${application.salaryMin} - ${application.salaryMax}</p>
+                  <p><strong>Kandidat Dibutuhkan:</strong> ${application.candidatesNeeded}</p>
+                  <p><strong>Pengalaman Kerja:</strong> ${application.experience}</p>
+                  <p><strong>Aktif Hingga:</strong> ${application.jobActiveUntil}</p>
+              `;
+              applicationsList.appendChild(jobItem);
+          });
+      }
+
+      // Load applications on page load
+      window.onload = loadApplications;
+  </script>
+  </section>
+
+  <!-- INI BAGIAN ABOUT -->
+  <section id="bagian-about" style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;">
+    <div class="about-container">
+      <h2>Mision</h2>
+      <p>To connect job seekers with their dream careers and empower employers to find the best talent.</p>
+    </div>
+    <div class="about-container">
+      <h2>Vision</h2>
+      <p>To be the leading job search platform, connecting millions of job seekers with their ideal careers and
+        empowering employers to build their dream teams.</p>
+    </div>
+    <div class="about-container">
+      <h2>Values</h2>
+      <p>We value integrity, innovation, and customer satisfaction in everything we do.</p>
+    </div>
+  </section>
+
+  <!-- INI BAGIAN CONTACT -->
+  <section id="bagian-contact" style="
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: rgb(255, 254, 254);">
+    <h2>Contact Us</h2>
+    <div class="form-container">
+      <div class="left">
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Name" />
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Email" />
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" placeholder="Phone" />
+        <label for="message">Message</label>
+        <textarea name="message" placeholder="Message"></textarea>
+        <div class="submit-btn">
+          <button type="submit">Send</button>
+        </div>
+      </div>
+      <div class="right">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.816531825121!2d109.34420101043264!3d-0.05425099994497571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e1d599622b58947%3A0x209695fee6b07761!2sPoliteknik%20Negeri%20Pontianak!5e0!3m2!1sid!2sid!4v1722240200745!5m2!1sid!2sid"
+          width="450" height="400" style="border: 0px; margin-top: 10px" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="contact-info">
+          <div style="display:grid; place-content:center; margin-top:5px"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INI BAGIAN FOOTER -->
+  <footer class="footer">
+    <div style="margin-left: -100px;">
+      <h4>Web Career at DCareer</h4>
+      <p>Jelajahi peluang menarik di dunia karier web dengan DCareer.</p>
+    </div>
+
+    <div style="margin-left: 10px;">
+      <h4 style="margin-left: 40px;">Contact Info</h4>
+      <ul style="list-style-type: none;">
+        <li><i class="fab fa-facebook"></i><a href="https://www.facebook.com/" target="_blank"
+            style="color:inherit; text-decoration: none;"> Facebook</a></li>
+        <li><i class="fab fa-instagram"></i><a href="https://www.instagram.com/" target="_blank"
+            style="color:inherit; text-decoration: none;"> Instagram</a></li>
+        <li><i class="fa fa-phone"></i> +123 456 7890</li>
+        <li><i class="fa fa-envelope"></i><a
+            href="https://support.google.com/pay/business/gethelp?authuser=0&hl=id&pli=1" target="_blank"
+            style="color:inherit; text-decoration: none;"> Dcareer@gmail.com</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="scripts/javascript.js"></script>
+  <script src="scripts/scripts_contacts.js"></script>
+  <script src="login.js"></script>
+  <script src="cari-lowongan.js"> </script>
+</body>
+
+</html>

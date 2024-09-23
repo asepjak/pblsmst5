@@ -1,0 +1,52 @@
+#bagian-about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.about-container {
+  background-color: rgb(153, 155, 153);
+  padding: 20px, 20px, 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 300px;
+  /* Set a fixed height for the cube-like shape */
+  width: 100%;
+  /* Make each container take up the full width of its grid cell */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  margin-top: 100px;
+  font-family: Arial, sans-serif;
+  /* Change font family to Arial */
+  text-align: center;
+}
+
+.about-container h2 {
+  margin-top: 5;
+}
+
+.about-container img {
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+/* Tambahkan CSS untuk efek hover pada kontainer about */
+.about-container {
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #cbe5ec;
+}
+
+.about-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
